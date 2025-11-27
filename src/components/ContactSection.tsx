@@ -21,8 +21,28 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send data to a backend or WhatsApp
-    console.log('Form submitted:', formData);
+    
+    // Format the message for WhatsApp
+    const message = `*New Service Request*
+    
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Service:* ${formData.serviceType}
+*Location:* ${formData.location}
+*Details:* ${formData.details}`;
+
+    // Your WhatsApp numbers
+    const primaryNumber = '254790328589';
+    const secondaryNumber = '254115850561';
+    
+    // Create WhatsApp URLs
+    const whatsappURL1 = `https://wa.me/${primaryNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappURL2 = `https://wa.me/${secondaryNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Open both WhatsApp chats
+    window.open(whatsappURL1, '_blank');
+    setTimeout(() => window.open(whatsappURL2, '_blank'), 500);
+    
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
   };
