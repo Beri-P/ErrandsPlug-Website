@@ -33,6 +33,34 @@ export function Testimonials() {
 
   return (
     <section className="py-16 px-6 bg-white">
+      <div className="flex justify-center gap-4 mt-6 items-center">
+            <button
+              onClick={prevTestimonial}
+              className="p-2 rounded-full hover:bg-gray-200 transition-colors"
+              aria-label="Previous testimonial"
+            >
+              ←
+            </button>
+            <div className="flex gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentIndex ? 'bg-[#3A5F0B] w-8' : 'bg-gray-300 w-2'
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={nextTestimonial}
+              className="p-2 rounded-full hover:bg-gray-200 transition-colors"
+              aria-label="Next testimonial"
+            >
+              →
+            </button>
+          </div>
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
