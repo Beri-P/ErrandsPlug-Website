@@ -29,7 +29,7 @@ export function Header() {
               ErrandsPlug
             </span>
             <span className="text-xs text-white/80 leading-none mt-0.5">
-              Your Nairobi Errand Partner
+              Convenience on Hassle Errands
             </span>
           </div>
         </motion.div>

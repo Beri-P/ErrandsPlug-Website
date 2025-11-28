@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-10 text-lg md:text-xl text-white/90 max-w-3xl mx-auto"
         >
-          Professional errand services across Nairobi CBD and neighboring towns - from document collection to sourcing utensils, plumbing materials, stationery, flowers, and more.
+          We serve you convenience on hassle errands as you focus on more important things. From document collection to queue services, sourcing, shopping assistance, and package delivery across Nairobi.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 10 }}

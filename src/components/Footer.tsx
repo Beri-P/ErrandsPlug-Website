@@ -11,7 +11,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col">
             <span className="text-white">ErrandsPlug</span>
-            <span className="text-xs text-gray-400 leading-none">Your Nairobi Errand Partner</span>
+            <span className="text-xs text-gray-400 leading-none">Convenience on Hassle Errands</span>
           </div>
         </div>
 

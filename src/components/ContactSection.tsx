@@ -76,7 +76,7 @@ _Thank you for contacting ErrandsPlug. We're here to serve you as you focus on o
       <div className="max-w-4xl mx-auto">
         <h2 className="text-center mb-4 text-[#000000]">Get Started Today</h2>
         <p className="text-center text-gray-600 mb-12">
-          Fill out the form below and we'll get back to you within 30 minutes
+          Tell us about your errand and we'll handle the hassle while you focus on what matters
         </p>
 
         <div className="bg-white p-8 rounded-xl shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
