@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-10 text-lg md:text-xl text-white/90 max-w-3xl mx-auto"
         >
-          Professional errand services across Nairobi - from CBD runs to document collection
+          Professional errand services across Nairobi CBD and neighboring towns - from document collection to sourcing utensils, plumbing materials, stationery, flowers, and more.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 10 }}

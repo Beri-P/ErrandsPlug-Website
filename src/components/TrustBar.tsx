@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 const trustPoints = [
   { icon: Clock, text: 'Fast & Reliable' },
   { icon: Receipt, text: 'Proof of Work' },
-  { icon: MapPin, text: 'All Nairobi' },
+  { icon: MapPin, text: 'Nairobi & Outskirts' },
   { icon: Handshake, text: 'Trusted Service' },
 ];
 

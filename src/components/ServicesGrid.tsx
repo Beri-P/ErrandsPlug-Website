@@ -24,13 +24,13 @@ const services = [
   },
   {
     icon: ShoppingCart,
-    title: 'Shopping Assistance',
-    description: 'Personal shopping services for your convenience',
+    title: 'Shopping & Sourcing',
+    description: 'Sourcing utensils, plumbing materials, stationery, flowers, jua kali products, and more',
   },
   {
     icon: MapPin,
-    title: 'CBD Errands',
-    description: 'Any errand within the CBD area handled professionally',
+    title: 'Nairobi & Surrounding Areas',
+    description: 'CBD, Westlands, Kilimani, Juja, Kitengela, and all neighboring towns',
   },
 ];
 

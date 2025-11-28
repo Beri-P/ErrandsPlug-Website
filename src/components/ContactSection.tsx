@@ -2,11 +2,22 @@ import { useState } from 'react';
 import { Send, Phone, Mail, MessageCircle } from 'lucide-react';
 
 const serviceTemplates = [
-  'I need a package picked up',
-  'Queue for Huduma service',
+  'Package pickup/delivery',
+  'Queue for Huduma/NTSA service',
   'Price check for product',
-  'Shopping research needed',
+  'Sourcing utensils',
+  'Sourcing plumbing materials',
+  'Sourcing stationery',
+  'Sourcing flowers',
+  'Sourcing jua kali products',
+  'Shopping assistance',
   'Custom errand request',
+];
+
+const urgencyOptions = [
+  'Normal (1-2 days)',
+  'Urgent (Same day)',
+  'Very Urgent (Within hours)',
 ];
 
 export function ContactSection() {
@@ -14,6 +25,7 @@ export function ContactSection() {
     name: '',
     phone: '',
     serviceType: '',
+    urgency: '',
     details: '',
     location: '',
   });
@@ -24,24 +36,29 @@ export function ContactSection() {
     
     // Format the message for WhatsApp
     const message = `*New Service Request*
-    
+
 *Name:* ${formData.name}
 *Phone:* ${formData.phone}
 *Service:* ${formData.serviceType}
+*Urgency:* ${formData.urgency}
 *Location:* ${formData.location}
-*Details:* ${formData.details}`;
+*Details:* ${formData.details}
+
+_Thank you for contacting ErrandsPlug. We're here to serve you as you focus on other important things._`;
 
     // Your WhatsApp numbers
     const primaryNumber = '254790328589';
     const secondaryNumber = '254115850561';
     
     // Create WhatsApp URLs
-    const whatsappURL1 = `https://wa.me/${primaryNumber}?text=${encodeURIComponent(message)}`;
-    const whatsappURL2 = `https://wa.me/${secondaryNumber}?text=${encodeURIComponent(message)}`;
-    
+    const urls = [primaryNumber, secondaryNumber].map(
+      num => `https://wa.me/${num}?text=${encodeURIComponent(message)}`
+    );
+
     // Open both WhatsApp chats
-    window.open(whatsappURL1, '_blank');
-    setTimeout(() => window.open(whatsappURL2, '_blank'), 500);
+    urls.forEach((url, i) => {
+      setTimeout(() => window.open(url, '_blank'), i * 500);
+    });
     
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
@@ -64,6 +81,28 @@ export function ContactSection() {
 
         <div className="bg-white p-8 rounded-xl shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
           <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="urgency" className="block mb-2 text-gray-700">
+                Urgency *
+              </label>
+              <select
+                id="urgency"
+                name="urgency"
+                required
+                value={formData.urgency}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3A5F0B] focus:border-transparent bg-white"
+              >
+                <option value="">Select urgency level</option>
+                {urgencyOptions.map((option, index) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              <p className="text-xs text-gray-500 mt-1">*Urgent services incur higher charges</p>
+            </div>
+
             <div>
               <label htmlFor="name" className="block mb-2 text-gray-700">
                 Full Name *
@@ -129,7 +168,7 @@ export function ContactSection() {
                 value={formData.location}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3A5F0B] focus:border-transparent"
-                placeholder="e.g., Westlands, CBD, Kilimani"
+                placeholder="e.g., Westlands, Juja, Kitengela, Kahawa"
               />
             </div>
 
@@ -169,21 +208,28 @@ export function ContactSection() {
           <p className="mb-4 text-gray-600">Or reach us directly:</p>
           <div className="flex flex-wrap justify-center gap-6">
             <a
-              href="tel:+254700000000"
+              href="tel:+254790328589"
               className="flex items-center gap-2 text-[#3A5F0B] hover:text-[#2f4d09] hover:scale-105 transition-all"
             >
               <Phone className="w-5 h-5" />
-              <span>+254 700 000 000</span>
+              <span>+254 790 328 589</span>
             </a>
             <a
-              href="mailto:info@errandservice.co.ke"
+              href="tel:+254115850561"
+              className="flex items-center gap-2 text-[#3A5F0B] hover:text-[#2f4d09] hover:scale-105 transition-all"
+            >
+              <Phone className="w-5 h-5" />
+              <span>+254 115 850 561</span>
+            </a>
+            <a
+              href="mailto:haronkiprotich21@gmail.com"
               className="flex items-center gap-2 text-[#3A5F0B] hover:text-[#2f4d09] hover:scale-105 transition-all"
             >
               <Mail className="w-5 h-5" />
-              <span>info@errandservice.co.ke</span>
+              <span>haronkiprotich21@gmail.com</span>
             </a>
             <a
-              href="https://wa.me/254700000000"
+              href="https://wa.me/254790328589"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#3A5F0B] hover:text-[#2f4d09] hover:scale-105 transition-all"
