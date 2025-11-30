@@ -47,7 +47,7 @@ export function ContactSection() {
 _Thank you for contacting ErrandsPlug. We're here to serve you as you focus on other important things._`;
 
     // Your WhatsApp numbers
-    const primaryNumber = '254790328589';
+    const primaryNumber = '254758438777';
     const secondaryNumber = '254115850561';
     
     // Create WhatsApp URLs
@@ -208,11 +208,11 @@ _Thank you for contacting ErrandsPlug. We're here to serve you as you focus on o
           <p className="mb-4 text-gray-600">Or reach us directly:</p>
           <div className="flex flex-wrap justify-center gap-6">
             <a
-              href="tel:+254790328589"
+              href="tel:++254758438777"
               className="flex items-center gap-2 text-[#3A5F0B] hover:text-[#2f4d09] hover:scale-105 transition-all"
             >
               <Phone className="w-5 h-5" />
-              <span>+254 790 328 589</span>
+              <span>+254 758 438 777</span>
             </a>
             <a
               href="tel:+254115850561"
@@ -229,7 +229,7 @@ _Thank you for contacting ErrandsPlug. We're here to serve you as you focus on o
               <span>haronkiprotich21@gmail.com</span>
             </a>
             <a
-              href="https://wa.me/254790328589"
+              href="https://wa.me/254758438777"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#3A5F0B] hover:text-[#2f4d09] hover:scale-105 transition-all"

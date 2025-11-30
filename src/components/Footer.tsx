@@ -54,8 +54,8 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-white">Contact</h3>
             <ul className="space-y-3 text-gray-300">
-              <li>Phone: +254 790 328 589/ +254 115 850 561</li>
-              <li>Email: harunkiprotich12@gmail.com</li>
+              <li>Phone: +254 758 438 777/ +254 115 850 561</li>
+              <li>Email: haronkiprotich21@gmail.com</li>
               <li>Hours: Mon-Sat, 8AM-6PM</li>
               <li>Location: Nairobi, Kenya</li>
             </ul>
