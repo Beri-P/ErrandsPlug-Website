@@ -222,11 +222,11 @@ _Thank you for contacting ErrandsPlug. We're here to serve you as you focus on o
               <span>+254 115 850 561</span>
             </a>
             <a
-              href="mailto:haronkiprotich21@gmail.com"
+              href="mailto:info@errandsplugnairobi.com"
               className="flex items-center gap-2 text-[#3A5F0B] hover:text-[#2f4d09] hover:scale-105 transition-all"
             >
               <Mail className="w-5 h-5" />
-              <span>haronkiprotich21@gmail.com</span>
+              <span>info@errandsplugnairobi.com</span>
             </a>
             <a
               href="https://wa.me/254758438777"
